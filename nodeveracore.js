@@ -58,12 +58,14 @@ module.exports = function(username, password, soapUrl){
 		getShippingActivity: {
 			method: 'GetShippingActivity',
 			arguments: {StartDate: '2015-01-01', EndDate: new Date().toISOString()},
-			parameters: ['StartDate', 'EndDate']
+			parameters: ['StartDate', 'EndDate'],
+			result: 'ShippingActivity'
 		},
 		getShippingCharge: {
 			method: 'GetShippingCharge',
 			arguments: {StartDate: '2015-01-01', EndDate: new Date().toISOString()},
-			parameters: ['StartDate', 'EndDate']
+			parameters: ['StartDate', 'EndDate'],
+			result: 'ShippingCharges'
 		},
 		connect: function(callback){
 			soap.createClient(url, function(err, client) {
