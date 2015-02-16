@@ -55,6 +55,16 @@ module.exports = function(username, password, soapUrl){
 				});
 			})
 		},
+		getShippingActivity: {
+			method: 'GetShippingActivity',
+			arguments: {StartDate: '2015-01-01', EndDate: new Date().toISOString()},
+			parameters: ['StartDate', 'EndDate']
+		},
+		getShippingCharge: {
+			method: 'GetShippingCharge',
+			arguments: {StartDate: '2015-01-01', EndDate: new Date().toISOString()},
+			parameters: ['StartDate', 'EndDate']
+		},
 		connect: function(callback){
 			soap.createClient(url, function(err, client) {
 				client.addSoapHeader({AuthenticationHeader: {Username:username, Password:password}}, '', 'pm', 'http://sma-promail/');

@@ -26,6 +26,8 @@ veracore.callMethods();
 | **getProduct** (id, ownerId, callback) | callback(err, result) | Gets product by id and ownerId.  |
 | **getOrder** (id, callback) | callback(err, result) | Gets an order by id.  |
 | **addOrder** (orderRequest, callback) | callback(err, result) | Adds an order using the `orderRequest` object (see details on the `orderRequest` object below), and returns the order id.  |
+| **getShippingActivity** (startDate, endDate, callback) | callback(err, result) | Gets all shipping activity between the start date and end date as ISO string. |
+| **getShippingCharge** (startDate, endDate, callback) | callback(err, result) | Gets all shipping charges between the start date and end date as ISO string (includes tracking #). |
 | **connect** (callback) | callback(client) | Connects to the SOAP client. This is mostly an internal method, but you can use it if you ever need to reconnect for some reason.  |
 
 ### `orderRequest` object
