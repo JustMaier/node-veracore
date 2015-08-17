@@ -1,6 +1,6 @@
 {
   "name": "node-veracore",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Simplify nodeJS integration with Veracore",
   "main": "nodeveracore.js",
   "scripts": {
@@ -26,6 +26,6 @@
   "devDependencies": {},
   "dependencies": {
     "lodash": "*",
-    "soap": "^0.6.1"
+    "soap": "^0.9.1"
   }
 }
